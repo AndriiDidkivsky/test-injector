@@ -6,7 +6,7 @@ class Injector {
 
     register (token, dep) {
         if(this.dependencies.hasOwnProperty(token)) {
-            throw new Error(`${token} already registrated`)
+            throw new Error(`${token} already registered`)
         } 
         this.dependencies[token] = dep;
     }  
