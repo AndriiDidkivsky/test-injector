@@ -13,7 +13,7 @@ class Injector {
 
     process (target) {
         let str = target.toString();
-        let args = str.match(this.MATCH_ARGS).pop().replace(/\s\s/g, ' ').split(',');
+        let args = str.match(this.MATCH_ARGS).pop().replace(/\s/g, '').split(',');
         target.apply(target, this.getDependencies(args));
     } 
 
